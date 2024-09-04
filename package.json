@@ -1,0 +1,36 @@
+{
+  "name": "rspack-plugin-vue-router",
+  "type": "module",
+  "version": "0.0.1-alpha.1",
+  "description": "",
+  "author": "tmg0",
+  "license": "MIT",
+  "homepage": "https://github.com/tmg0/hero-motion#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmg0/rspack-plugin-vue-router.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tmg0/rspack-plugin-vue-router/issues"
+  },
+  "keywords": [],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "ohash": "^1.1.3",
+    "rspack-plugin-virtual-module": "^0.1.13",
+    "unplugin-vue-router": "^0.10.7"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.0.0",
+    "@rspack/core": "^1.0.2",
+    "eslint": "^9.9.1",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}
