@@ -1,5 +1,7 @@
 # rspack-plugin-vue-router
 
+[![NPM version](https://img.shields.io/npm/v/rspack-plugin-vue-router)](https://www.npmjs.com/package/rspack-plugin-vue-router)
+
 File-system vue routing for [rspack](https://rspack.dev/index) by [unplugin-vue-router](https://uvr.esm.is/).
 
 unplugin-vue-router may have some [issues](https://github.com/posva/unplugin-vue-router/issues/500) to work with rspack, this caused by the unplugin rspack virtual module bug: [here](https://github.com/unjs/unplugin/pull/411)
