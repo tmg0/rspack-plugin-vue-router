@@ -6,6 +6,27 @@ unplugin-vue-router may have some [issues](https://github.com/posva/unplugin-vue
 
 This issue shoud be fixed in the next version of unplugin, and before that, this pkg provide a solution for using unplugin-vue-router in your application.
 
+## Installation
+
+```bash
+pnpm add rspack-plugin-vue-router -D
+```
+
+## Usage
+
+```ts
+// rspack.config.ts
+import RspackVueRouterPlugin from 'rspack-plugin-vue-router'
+
+export default {
+  plugins: [
+    new RspackVueRouterPlugin({
+      routesFolder: './app/pages',
+    }),
+  ],
+}
+```
+
 ## Options
 
 ### `options.routesFolder`
