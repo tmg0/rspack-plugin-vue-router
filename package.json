@@ -1,11 +1,11 @@
 {
   "name": "rspack-plugin-vue-router",
   "type": "module",
-  "version": "0.0.1-alpha.3",
-  "description": "",
+  "version": "0.0.1-alpha.4",
+  "description": "File-system vue routing for rspack by unplugin-vue-router",
   "author": "tmg0",
   "license": "MIT",
-  "homepage": "https://github.com/tmg0/hero-motion#readme",
+  "homepage": "https://github.com/tmg0/rspack-plugin-vue-router#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tmg0/rspack-plugin-vue-router.git"
