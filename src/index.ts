@@ -1,3 +1,5 @@
+import { promises as fs } from 'node:fs'
+import { dirname } from 'node:path'
 import type { Compiler } from '@rspack/core'
 import { hash } from 'ohash'
 import { RspackVirtualModulePlugin } from 'rspack-plugin-virtual-module'
@@ -8,15 +10,22 @@ export default class RspackVueRouterPlugin extends RspackVirtualModulePlugin {
   public name = 'RspackVueRouterPlugin'
 
   private _ctx
+  private _options
   private _hash = ''
 
-  constructor(options: Options = {}) {
+  constructor(vueRouterOptions: Options = {}) {
     super({ 'vue-router/auto-routes': 'export const routes = []' })
-    this._ctx = createRoutesContext(resolveOptions(options))
+    const options = resolveOptions(vueRouterOptions)
+    this._options = options
+    this._ctx = createRoutesContext(options)
   }
 
   async apply(compiler: Compiler) {
     super.apply(compiler)
+
+    if (typeof this._options.dts === 'string')
+      await fs.mkdir(dirname(this._options.dts), { recursive: true })
+
     await this._ctx.scanPages(false)
     const content = this._ctx.generateRoutes()
     this.writeModule('vue-router/auto-routes', content)

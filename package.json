@@ -1,7 +1,7 @@
 {
   "name": "rspack-plugin-vue-router",
   "type": "module",
-  "version": "0.0.1-alpha.4",
+  "version": "0.1.0",
   "description": "File-system vue routing for rspack by unplugin-vue-router",
   "author": "tmg0",
   "license": "MIT",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^3.0.0",
     "@rspack/core": "^1.0.2",
+    "@types/node": "^22.7.4",
     "eslint": "^9.9.1",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
